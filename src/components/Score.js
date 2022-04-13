@@ -1,5 +1,22 @@
-const Score = () => {
+import styles from './Score.module.css';
 
-};
+function Score(props) {
+  const { score, bestScore } = props;
 
-export default score;
+  return (
+    <div className={styles['score-group']}>
+      <div className={styles.score}>
+        Score:
+        {' '}
+        {score}
+      </div>
+      <div className={`${styles.score} ${styles.best}`}>
+        Best Score:
+        {' '}
+        {bestScore}
+      </div>
+    </div>
+  );
+}
+
+export default Score;
